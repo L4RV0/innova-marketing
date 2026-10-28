@@ -1,6 +1,6 @@
 # InnovaMarketing — Landing page
 
-Landing page estática (HTML + CSS + JavaScript, sin frameworks) para la agencia **InnovaMarketing**, desplegada gratis en **Azure Static Web Apps**.
+Landing page estática (HTML + CSS + JavaScript, sin frameworks) para la agencia **InnovaMarketing**, desplegada gratis en **AWS Amplify Hosting**.
 
 ## Estructura
 
@@ -11,6 +11,7 @@ js/main.js          Menú móvil, animaciones y validación del formulario
 assets/logo.svg     Logo vectorial (alta resolución, escalable)
 assets/logo-hd.png  Logo en PNG 2000 px con fondo transparente
 assets/favicon.svg  Ícono de la pestaña
+amplify.yml         Configuración de despliegue para AWS Amplify
 ```
 
 ## Verla en tu computadora
@@ -21,31 +22,45 @@ Abre `index.html` con doble clic, o levanta un servidor local:
 npx http-server -p 5500
 ```
 
-## Despliegue en Azure Static Web Apps (plan Free)
+## Despliegue en AWS Amplify Hosting (gratis)
 
-1. **Sube el código a GitHub** (repositorio `innova-marketing`).
-2. Entra a <https://portal.azure.com> → **Crear un recurso** → busca **Static Web App** → **Crear**.
-3. Completa:
-   - **Suscripción**: Azure for Students (o tu cuenta gratuita).
-   - **Grupo de recursos**: crea uno nuevo, p. ej. `rg-innova`.
-   - **Nombre**: `innova-marketing`.
-   - **Tipo de plan**: **Free**.
-   - **Origen**: **GitHub** → inicia sesión y elige tu organización, el repositorio y la rama `main`.
-   - **Valores preestablecidos de compilación**: **Custom**.
-     - Ubicación de la app: `/`
-     - Ubicación de la API: *(vacío)*
-     - Ubicación de salida: *(vacío)*
-4. **Revisar y crear** → **Crear**.
-5. Azure agrega automáticamente un archivo en `.github/workflows/` a tu repositorio. Ese archivo es un **pipeline de GitHub Actions**: cada vez que haces `git push` a `main`, GitHub vuelve a publicar la página sola (CI/CD).
-6. En la pestaña **Actions** de GitHub verás el despliegue; cuando termine en verde, abre la **URL** que aparece en el recurso de Azure (algo como `https://xxxx.azurestaticapps.net`).
+AWS Amplify Hosting publica sitios estáticos directamente desde GitHub y entra en la capa gratuita de AWS. El archivo [`amplify.yml`](amplify.yml) le indica a Amplify que no hay nada que compilar y que publique la carpeta raíz tal cual.
 
-### Actualizar la página
+### 1. Crear la cuenta de AWS
+
+1. Regístrate en <https://aws.amazon.com/free>.
+2. Cuando te pregunte el tipo de plan, elige **Free plan (plan gratuito)**: recibes créditos de prueba y AWS **no cobra** mientras no cambies a un plan de pago.
+3. AWS pide una tarjeta solo para verificar tu identidad (puede hacer un cargo temporal de ~1 USD que se devuelve).
+4. Recomendado: en **Billing → Budgets**, crea un presupuesto de **0 USD** con alerta por correo. Así te avisa si algo llegara a generar costo.
+
+### 2. Conectar el repositorio
+
+1. Sube el código a GitHub (repositorio `innova-marketing`).
+2. En la consola de AWS busca **Amplify** → **Create new app** (Crear aplicación).
+3. Elige **GitHub** → **Next** y autoriza a AWS Amplify a ver tu cuenta.
+4. Selecciona el repositorio `innova-marketing` y la rama `main` → **Next**.
+5. En **App settings**, Amplify detecta el `amplify.yml`. No cambies nada → **Next**.
+6. Revisa y pulsa **Save and deploy**.
+
+### 3. Ver la página publicada
+
+Amplify ejecuta tres fases: **Provision → Build → Deploy**. Cuando las tres estén en verde (1–2 minutos), aparece una URL como:
+
+```
+https://main.d1abc2xyz3.amplifyapp.com
+```
+
+### 4. Actualizar la página (CI/CD)
+
+Cada `git push` a `main` dispara un nuevo despliegue automático en Amplify:
 
 ```bash
-git pull
 git add .
 git commit -m "Describe tu cambio"
 git push
 ```
 
-> Haz `git pull` primero, porque Azure añadió el archivo del workflow en GitHub y tu copia local no lo tiene todavía.
+### Para no generar costos
+
+- Este sitio pesa menos de 1 MB: está muy por debajo de los límites gratuitos (minutos de compilación, almacenamiento y tráfico).
+- Cuando termines la tarea, si quieres, elimina la app en **Amplify → App settings → General → Delete app**.
