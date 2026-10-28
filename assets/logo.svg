@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -14 672 176" role="img" aria-label="InnovaMarketing">
+  <defs>
+    <linearGradient id="im-green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3CC35A"/>
+      <stop offset="1" stop-color="#1E8E3E"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#im-green)">
+    <!-- I -->
+    <rect x="0" y="0" width="24" height="100"/>
+    <!-- N -->
+    <polygon points="36,100 36,0 62,0 100,60 100,0 124,0 124,100 98,100 60,40 60,100"/>
+    <!-- check -->
+    <polygon points="94,62 112,44 150,80 199,-6 227,-6 156,106"/>
+  </g>
+  <g fill="#14245A">
+    <!-- N (diagonal + stem; the check forms its left side) -->
+    <polygon points="224,0 250,0 284,56 284,0 308,0 308,100 282,100"/>
+    <!-- O -->
+    <path fill-rule="evenodd" d="M378 -2a57 52 0 1 1 0 104a57 52 0 1 1 0-104zm0 25a32 27 0 1 0 0 54a32 27 0 1 0 0-54z"/>
+    <!-- V -->
+    <polygon points="440,0 468,0 496,70 524,0 552,0 509,100 483,100"/>
+    <!-- A -->
+    <path fill-rule="evenodd" d="M584 0h28l42 100h-28l-8-20h-40l-8 20h-28zm14 31l-12 29h24z"/>
+  </g>
+  <text x="2" y="150" textLength="652" lengthAdjust="spacing" fill="#14245A"
+        font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="500" font-size="40">MARKETING</text>
+</svg>

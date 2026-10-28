@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InnovaMarketing | Marketing digital orientado a resultados</title>
+  <meta name="description" content="InnovaMarketing es una agencia de marketing digital que diseña estrategias medibles: publicidad, SEO, contenido y automatización conectados a tus ventas.">
+  <meta name="theme-color" content="#14245A">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Logo vectorial reutilizable (se dibuja con <use href="#logo">) -->
+  <svg class="sprite" aria-hidden="true">
+    <defs>
+      <linearGradient id="im-green" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3CC35A"/>
+        <stop offset="1" stop-color="#1E8E3E"/>
+      </linearGradient>
+      <symbol id="logo" viewBox="-8 -14 672 176">
+        <g fill="url(#im-green)">
+          <rect x="0" y="0" width="24" height="100"/>
+          <polygon points="36,100 36,0 62,0 100,60 100,0 124,0 124,100 98,100 60,40 60,100"/>
+          <polygon points="94,62 112,44 150,80 199,-6 227,-6 156,106"/>
+        </g>
+        <g style="fill: var(--logo-ink, #14245A)">
+          <polygon points="224,0 250,0 284,56 284,0 308,0 308,100 282,100"/>
+          <path fill-rule="evenodd" d="M378 -2a57 52 0 1 1 0 104a57 52 0 1 1 0-104zm0 25a32 27 0 1 0 0 54a32 27 0 1 0 0-54z"/>
+          <polygon points="440,0 468,0 496,70 524,0 552,0 509,100 483,100"/>
+          <path fill-rule="evenodd" d="M584 0h28l42 100h-28l-8-20h-40l-8 20h-28zm14 31l-12 29h24z"/>
+          <text x="2" y="150" textLength="652" lengthAdjust="spacing" font-family="Montserrat, 'Segoe UI', Arial, sans-serif" font-weight="500" font-size="40">MARKETING</text>
+        </g>
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24">
+        <path d="M4 12.5l5 5L20 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="top">
+    <div class="container nav">
+      <a href="#top" class="brand" aria-label="InnovaMarketing, inicio">
+        <svg class="brand-logo" role="img" aria-label="InnovaMarketing"><use href="#logo"/></svg>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+      <nav id="menu" class="menu">
+        <a href="#servicios">Servicios</a>
+        <a href="#metodo">Método</a>
+        <a href="#casos">Casos</a>
+        <a href="#contacto" class="btn btn-small">Agenda una llamada</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Agencia de marketing de crecimiento</p>
+          <h1>Marketing que se mide en <em>ventas</em>, no en likes.</h1>
+          <p class="lead">Diseñamos y ejecutamos estrategias digitales para marcas que quieren crecer con datos: campañas, posicionamiento, contenido y automatización, todo conectado a tus objetivos comerciales.</p>
+          <div class="hero-actions">
+            <a href="#contacto" class="btn">Solicita un diagnóstico gratuito</a>
+            <a href="#casos" class="link-arrow">Ver resultados <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="hero-proof">
+            <li><svg><use href="#check"/></svg> Sin contratos de permanencia</li>
+            <li><svg><use href="#check"/></svg> Reportes mensuales transparentes</li>
+          </ul>
+        </div>
+
+        <figure class="hero-panel" aria-label="Ejemplo de panel de resultados">
+          <div class="panel-head">
+            <span>Rendimiento de campaña</span>
+            <span class="pill">Últimos 90 días</span>
+          </div>
+          <div class="panel-metric">
+            <strong>+184%</strong>
+            <span>leads calificados</span>
+          </div>
+          <svg class="panel-chart" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#2FAE4E" stop-opacity=".22"/>
+                <stop offset="1" stop-color="#2FAE4E" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 100 C40 96 60 92 90 84 S150 78 180 60 S240 40 270 28 S305 14 320 10 V120 H0 Z" fill="url(#area)"/>
+            <path d="M0 100 C40 96 60 92 90 84 S150 78 180 60 S240 40 270 28 S305 14 320 10" fill="none" stroke="#2FAE4E" stroke-width="2.5"/>
+            <path d="M0 106 C50 104 90 102 130 98 S220 92 320 86" fill="none" stroke="#14245A" stroke-opacity=".25" stroke-width="2" stroke-dasharray="4 5"/>
+          </svg>
+          <div class="panel-foot">
+            <div><small>Costo por lead</small><b>−41%</b></div>
+            <div><small>ROAS</small><b>4.2x</b></div>
+            <div><small>Conversión</small><b>6.8%</b></div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CIFRAS -->
+    <section class="stats" aria-label="Cifras de InnovaMarketing">
+      <div class="container stats-grid">
+        <div><strong>+120</strong><span>campañas lanzadas</span></div>
+        <div><strong>3.4x</strong><span>retorno publicitario promedio</span></div>
+        <div><strong>92%</strong><span>de clientes renuevan</span></div>
+        <div><strong>8 años</strong><span>haciendo crecer marcas</span></div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Servicios</p>
+          <h2>Todo lo que tu marca necesita para crecer, <em>bajo una sola estrategia</em>.</h2>
+        </div>
+
+        <ol class="services">
+          <li class="reveal">
+            <span class="num">01</span>
+            <h3>Estrategia y posicionamiento</h3>
+            <p>Investigamos tu mercado, definimos tu propuesta de valor y construimos un plan de marketing con metas claras y medibles.</p>
+            <ul class="tags"><li>Branding</li><li>Buyer persona</li><li>Plan anual</li></ul>
+          </li>
+          <li class="reveal">
+            <span class="num">02</span>
+            <h3>Publicidad digital</h3>
+            <p>Campañas en Meta, Google y TikTok optimizadas cada semana para bajar tu costo por cliente y escalar lo que funciona.</p>
+            <ul class="tags"><li>Meta Ads</li><li>Google Ads</li><li>TikTok Ads</li></ul>
+          </li>
+          <li class="reveal">
+            <span class="num">03</span>
+            <h3>SEO y contenido</h3>
+            <p>Contenido útil que posiciona tu marca en buscadores y convierte visitas en oportunidades de venta reales.</p>
+            <ul class="tags"><li>SEO técnico</li><li>Blog</li><li>Copywriting</li></ul>
+          </li>
+          <li class="reveal">
+            <span class="num">04</span>
+            <h3>Redes sociales</h3>
+            <p>Gestión de comunidad y producción de piezas con identidad propia, pensadas para generar conversación y confianza.</p>
+            <ul class="tags"><li>Instagram</li><li>LinkedIn</li><li>Video corto</li></ul>
+          </li>
+          <li class="reveal">
+            <span class="num">05</span>
+            <h3>Analítica y automatización</h3>
+            <p>Conectamos tu CRM, email y embudos de venta para que cada lead se siga de forma automática y nada se pierda.</p>
+            <ul class="tags"><li>CRM</li><li>Email marketing</li><li>Dashboards</li></ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- MÉTODO -->
+    <section class="section method" id="metodo">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Nuestro método</p>
+          <h2>Un proceso claro, de la idea al <em>resultado</em>.</h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step-mark"><svg><use href="#check"/></svg></span>
+            <small>Semana 1</small>
+            <h3>Diagnóstico</h3>
+            <p>Auditamos tus canales, tu competencia y tus números actuales.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-mark"><svg><use href="#check"/></svg></span>
+            <small>Semana 2</small>
+            <h3>Estrategia</h3>
+            <p>Definimos objetivos, presupuesto, canales y mensajes clave.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-mark"><svg><use href="#check"/></svg></span>
+            <small>Semanas 3–8</small>
+            <h3>Ejecución</h3>
+            <p>Lanzamos campañas y contenido con un calendario compartido.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-mark"><svg><use href="#check"/></svg></span>
+            <small>Siempre</small>
+            <h3>Optimización</h3>
+            <p>Medimos, probamos y ajustamos para mejorar mes a mes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASOS -->
+    <section class="section" id="casos">
+      <div class="container">
+        <div class="section-head split">
+          <div>
+            <p class="kicker">Casos de éxito</p>
+            <h2>Resultados que hablan <em>por sí solos</em>.</h2>
+          </div>
+          <p class="muted">Algunos proyectos recientes en distintos sectores. Cada estrategia se diseña a la medida del negocio.</p>
+        </div>
+
+        <div class="cases">
+          <article class="case reveal">
+            <p class="case-sector">Retail de moda</p>
+            <strong class="case-num">+212%</strong>
+            <p class="case-label">ventas en tienda online</p>
+            <p>Rediseño del embudo de compra y campañas de catálogo dinámico en Meta durante 6 meses.</p>
+          </article>
+          <article class="case reveal">
+            <p class="case-sector">Inmobiliaria</p>
+            <strong class="case-num">−48%</strong>
+            <p class="case-label">costo por lead</p>
+            <p>Segmentación por intención de compra en Google Ads y seguimiento automático por WhatsApp.</p>
+          </article>
+          <article class="case reveal">
+            <p class="case-sector">Software B2B</p>
+            <strong class="case-num">3.1x</strong>
+            <p class="case-label">demos agendadas</p>
+            <p>Estrategia de contenido en LinkedIn y secuencias de email para nutrir prospectos.</p>
+          </article>
+        </div>
+
+        <figure class="quote reveal">
+          <blockquote>“Por primera vez entendemos qué parte de nuestra inversión en marketing genera ventas. El equipo de Innova se siente como parte de nuestra empresa.”</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">LR</span> Laura Ríos <small>Gerente comercial, sector inmobiliario</small></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="kicker">Hablemos</p>
+          <h2>¿Listo para hacer <em>crecer</em> tu marca?</h2>
+          <p class="lead">Cuéntanos sobre tu negocio y en menos de 24 horas te enviamos un diagnóstico inicial sin costo.</p>
+          <ul class="contact-list">
+            <li><small>Correo</small><a href="mailto:hola@innovamarketing.com">hola@innovamarketing.com</a></li>
+            <li><small>Teléfono</small><a href="tel:+51900000000">+51 900 000 000</a></li>
+            <li><small>Horario</small>Lunes a viernes, 9:00 – 18:00</li>
+          </ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="empresa">Empresa</label>
+            <input id="empresa" name="empresa" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="servicio">¿Qué necesitas?</label>
+            <select id="servicio" name="servicio">
+              <option>Estrategia completa</option>
+              <option>Publicidad digital</option>
+              <option>SEO y contenido</option>
+              <option>Redes sociales</option>
+              <option>Analítica y automatización</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente tu objetivo"></textarea>
+          </div>
+          <button class="btn full" type="submit">Enviar solicitud</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <svg class="footer-logo" role="img" aria-label="InnovaMarketing"><use href="#logo"/></svg>
+      <nav class="footer-nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#metodo">Método</a>
+        <a href="#casos">Casos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="muted">© <span id="year">2026</span> InnovaMarketing. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
